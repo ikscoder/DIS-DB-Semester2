@@ -1,0 +1,16 @@
+<div>
+    <headermenu></headermenu>
+    <main>
+            <router-outlet></router-outlet>
+    </main>
+    <footer-component></footer-component>
+</div>
+<div *ngIf="isLoading" class="valign-wrapper" style="z-index: 9999;background: rgba(0,0,0,0.4);top: 0;position: absolute;width: 98.83vw;height: 100vh;">
+    <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1 default-text"></div>
+            <div class="sk-child sk-bounce2 default-text"></div>
+            <div class="sk-child sk-bounce3 default-text"></div>
+            <div class="sk-child sk-bounce4 default-text"></div>
+            <div class="sk-child sk-bounce5 default-text"></div>
+    </div>
+</div>

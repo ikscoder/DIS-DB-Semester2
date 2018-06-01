@@ -1,0 +1,25 @@
+﻿<ul id="slide-out" class="side-nav fixed main-side-nav" [ngStyle]="{'background-color':style.backgroundMain,'color':style.primary}">
+        <li style="padding-top: 15px;">
+            <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
+                <li><a routerLink="" class="left hide-on-med-and-down tooltipped logo default-text" data-position="bottom" data-delay="50" data-tooltip="Не надо сюда тыкать">Image uploading</a>
+                </li>
+                    <li>
+                            <a id="fullScreenToggle" (click)="toggleFullScreenClick()" class="waves-effect waves-block waves-light default-text">
+                                <i class="material-icons">settings_overscan</i>
+                                <span class="nav-text">Full sreen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  (click)="fileInput.click()" class="waves-effect waves-block waves-light default-text">
+                                <i class="material-icons">cloud_upload</i>
+                                <span class="nav-text">Upload image</span>
+                            </a>
+                            <input #fileInput  (change)="onFileChanged($event)" type="file" style="display: none" />
+                        </li>
+                        <li><img style="display: none;" [src]="sanitize(base64textString)"></li>
+            </ul>
+        </li>
+    </ul>
+    <a data-activates="slide-out" class="button-collapse hide-on-large-only">
+        <i class="material-icons">menu</i>
+    </a>

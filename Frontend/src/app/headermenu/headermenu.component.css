@@ -1,0 +1,48 @@
+﻿nav {
+  height: 40px;
+  line-height: 40px;
+}
+
+.navbar-fixed {
+  height: 44px;
+}
+
+.logo{
+  letter-spacing: 0px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+nav,
+nav .nav-wrapper i,
+nav a.button-collapse,
+nav a.button-collapse i {
+  height: 44px;
+  line-height: 44px;
+  box-shadow: none;
+}
+.nav-mobile{
+  margin-right: 20vw;
+}
+
+.nav-mobile > li > a {
+  display: flex;
+}
+.nav-mobile > li > a> span{
+  padding-left: 5px;
+}
+
+.dropdown-content li > a {
+  line-height: 30px;
+}
+
+.dropdown-content li > a > i {
+  line-height: 30px;
+}
+
+.main-side-nav {
+  left: calc(100vw - 300px);
+  top: 0px;
+  overflow: hidden;
+  height: 100%;
+}

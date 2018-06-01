@@ -1,0 +1,17 @@
+.h404 {
+    font-size: 18rem;
+    padding: 0;
+    margin: 0;
+}
+
+.homebtn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+}
+
+.mes404{
+    font-size: 2rem;
+    margin-top: 10vh;
+}

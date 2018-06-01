@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ff6e40">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8" />
+    <title>Зачем писать на Java, когда есть божественный c#?</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+    <my-app>
+        <div class="loader white" style="width:100vw;height:100vh">
+            <div style="width: 30vw;position: absolute;top: 35%;left:35%" class="center">
+                <h1 class="deep-orange-text center">Loading images</h1>
+                <div class="sk-three-bounce">
+                    <div class="sk-child deep-orange sk-bounce1"></div>
+                    <div class="sk-child deep-orange sk-bounce2"></div>
+                    <div class="sk-child deep-orange sk-bounce3"></div>
+                    <div class="sk-child deep-orange sk-bounce4"></div>
+                    <div class="sk-child deep-orange sk-bounce5"></div>
+                </div>
+                <p class="deep-orange-text">by Stubarev Igor</p>
+            </div>
+        </div>
+    </my-app>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./node_modules/hammerjs/hammer.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+    <script src="js/main.js"></script>
+    <script src="public/polyfills.js"></script>
+    <script src="public/app.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrainWidth: false, // Does not change width of dropdown to that of the activator
+                hover: false, // Activate on hover
+                gutter: 10, // Spacing from edge
+                belowOrigin: true, // Displays dropdown below the button
+                alignment: 'right', // Displays dropdown with edge aligned to the left of button
+                stopPropagation: false // Stops event propagation
+            }
+            );
+
+            $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true, // Choose whether you can drag to open on touch screens,
+            }
+            );
+
+            $('.tooltipped').tooltip({ delay: 50 });
+        });
+    </script>
+</body>
+
+</html>

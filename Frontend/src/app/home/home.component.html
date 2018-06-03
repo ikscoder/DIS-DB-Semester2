@@ -1,1 +1,3 @@
-<img class="materialboxed fullscreen" src="{{currentImage}}">
+<div class="center">
+    <img class="materialboxed fullscreen" [src]="sanitize(dataService.currentImage&&dataService.currentImage.data)">
+</div>

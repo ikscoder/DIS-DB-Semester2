@@ -294,3 +294,5 @@ __pycache__/
 # tools/
 Analisys Core/Core/CoreServices/Logs/log.csv
 Analisys Core/AnalysisCore/AnalysisCore/ServiceData
+/ImageUploadService/nbproject/private/
+/ImageUploadService/build/

@@ -1,4 +1,4 @@
-﻿<ul id="slide-out" class="side-nav fixed main-side-nav" [ngStyle]="{'background-color':style.backgroundMain,'color':style.primary}">
+﻿<ul id="slide-out" class="side-nav fixed main-side-nav">
         <li style="padding-top: 15px;">
             <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
                 <li><a routerLink="" class="left hide-on-med-and-down tooltipped logo default-text" data-position="bottom" data-delay="50" data-tooltip="Не надо сюда тыкать">Image uploading</a>
@@ -16,7 +16,19 @@
                             </a>
                             <input #fileInput  (change)="onFileChanged($event)" type="file" style="display: none" />
                         </li>
-                        <li><img style="display: none;" [src]="sanitize(base64textString)"></li>
+                        <li style="text-align: center">Images List</li>
+            </ul>
+        </li>
+        <li>
+            <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
+                <ng-container *ngFor="let name of dataService.imageNames;">
+                    <li class="row">
+                        <a (click)="setCurrentImage(name)" class="col s10 center">{{name}}</a>
+                        <a  (click)="deleteImage(name)" class="waves-effect waves-block waves-light default-text col s2">
+                                <i class="material-icons default-text">delete_forever</i>
+                        </a>
+                    </li>
+                </ng-container>
             </ul>
         </li>
     </ul>
